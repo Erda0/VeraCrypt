@@ -129,7 +129,8 @@ namespace VeraCrypt
 
 		// look for OSXFuse dynamic library
 		struct stat sb;
-		if (0 != stat("/usr/local/lib/libosxfuse_i64.2.dylib", &sb))
+		//if (0 != stat("/usr/local/lib/libosxfuse_i64.2.dylib", &sb))
+		if (0 != stat("/opt/local/lib/libosxfuse_i64.2.dylib", &sb))
 		{
 			throw HigherFuseVersionRequired (SRC_POS);
 		}
